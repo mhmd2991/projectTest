@@ -123,7 +123,7 @@ main .container {
 }
 
 .container .searchbar:focus {
-    border: 1px solid blue;
+    border: 1px solid deepskyblue;
 }
 
 .container .searchbar:focus::placeholder {
@@ -133,9 +133,11 @@ main .container {
 .container .search-results {
     margin: 30px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 20px;
     width: 90%;
+    background-color: #f0f0f021;
+    padding: 40px 20px;
 
 }
 
@@ -145,6 +147,11 @@ main .container {
     align-items: center;
     flex-direction: column;
     font-weight: 500;
+    border-radius: 6px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 2px 2px 0px rgba(0 0 0/10%), 0px -1px 2px 0px rgba(0 0 0/10%);
+    cursor: pointer;
 }
 
 .container .search-results .search-result-item .search-item {
@@ -188,6 +195,16 @@ main .container {
     box-shadow: 0px 2px 2px 0px rgba(0 0 0 /10%);
 }
 
+.content .left .box .inner-box{
+    width: 100%;
+    text-align: right;
+}
+
+.content .left .box .desc{
+    font-weight: 500;
+    color: gray;
+}
+
 .content .left .box a {
     color: deepskyblue;
 }
@@ -196,7 +213,7 @@ main .container {
     background-color: deepskyblue;
     color: white !important;
     border-radius: 6px;
-    padding: 10px 20px;
+    padding: 10px 60px;
     font-weight: 500;
 }
 
@@ -204,7 +221,7 @@ main .container {
     opacity: 0.6;
 }
 
-.content .right .item a{
+.content .right .item a {
     color: deepskyblue;
     margin-bottom: 20px;
     font-weight: 500;
