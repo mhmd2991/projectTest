@@ -21,7 +21,10 @@ function PrintInfo() {
         if (tourism[i].id === id) {
             selectElement(".left").innerHTML += `
 <div class="box">
+<div class="inner-box">
 <div class="title"><a href="steps.html?id=${tourism[i].tId}">${tourism[i].info}</a></div>
+<div class="desc">${tourism[i].desc}</div>
+</div>
 <a href="steps.html?id=${tourism[i].tId}" class="btn">اختار</a>
 </div>
 `;
