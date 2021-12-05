@@ -1,1 +1,211 @@
+/* Start Global Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    transition: all .3s ease-in-out;
+    /*border: 1px solid red;*/
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../font/DINNextLTArabic-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../font/DINNextLTArabic-Regular.ttf);
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../font/DINNextLTArabic-Regular.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../font/DINNextLTArabic-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../font/DINNextLTArabic-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../font/DINNextLTArabic-Black.ttf);
+    font-weight: bolder;
+}
+
+:root {
+    --blackColor: #000;
+    --whiteColor: hsl(0, 0%, 100%);
+    --mainTransition: .3s;
+}
+
+body {
+    font-family: myFirstFont;
+    font-size: 16px;
+    direction: rtl;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    display: block;
+    transition: var(--mainTransition);
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 60px;
+}
+
+/* Small */
+@media (min-width: 768px) {
+
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+main .container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.container .searchbar {
+    border: 1px solid var(--blackColor);
+    font-weight: 300;
+    padding: 10px 20px;
+    width: 90%;
+    border-radius: 6px;
+}
+
+.container .searchbar:focus {
+    border: 1px solid blue;
+}
+
+.container .searchbar:focus::placeholder {
+    opacity: 0;
+}
+
+.container .search-results {
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 90%;
+
+}
+
+.container .search-results .search-result-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 500;
+}
+
+.container .search-results .search-result-item .search-item {
+    color: grey;
+    cursor: pointer;
+}
+
+.container .search-results .search-result-item .search-item i {
+    font-size: 40px;
+    color: deepskyblue;
+}
+
+.container .content {
+    display: flex;
+
+}
+
+.container .content .left {
+    margin-top: 30px;
+    flex-basis: 70%;
+}
+
+.container .content .right {
+    margin-top: 30px;
+    flex-basis: 30%;
+}
+
+.content .left .title {
+    margin: 20px 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.content .left .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0px 2px 2px 0px rgba(0 0 0 /10%);
+}
+
+.content .left .box a {
+    color: deepskyblue;
+}
+
+.content .left .btn {
+    background-color: deepskyblue;
+    color: white !important;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.content .left .btn:hover {
+    opacity: 0.6;
+}
+
+.content .right .item a{
+    color: deepskyblue;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
