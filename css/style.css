@@ -179,7 +179,7 @@ main .container {
     flex-basis: 30%;
 }
 
-.content .left .title {
+/*.content .left .title {
     margin: 20px 0;
     font-weight: 500;
     cursor: pointer;
@@ -220,9 +220,126 @@ main .container {
 .content .left .btn:hover {
     opacity: 0.6;
 }
+.content .right .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.content .right .item i{
+    margin-top: -13px;
+    cursor: pointer;
+}
 
 .content .right .item a {
     color: deepskyblue;
     margin-bottom: 20px;
     font-weight: 500;
+}
+
+.sub-items {
+    display: none;
+    text-align: right;
+}
+
+.sub-items > div > a {
+    color: grey;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.faq.active .sub-items{
+    display: block;
+}
+
+.faq.active .fa-angle-down {
+  transform: rotate(180deg);
+}*/
+.container .content .left .sector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0px 2px 2px 0px rgba(0 0 0 /10%);
+}
+
+.container .content .left .sector .inner-text h3 {
+    font-weight: bold;
+    color: deepskyblue;
+}
+
+.container .content .left .sector .inner-text p {
+    font-weight: 500;
+    color: gray;
+}
+
+.container .content .left .sector .btn {
+    background-color: deepskyblue;
+    color: white !important;
+    border-radius: 6px;
+    padding: 10px 60px;
+    font-weight: 500;
+}
+
+.container .content .left .sector .btn:hover {
+    opacity: .6;
+}
+
+.container .content .left .part {
+    display: none;
+}
+
+.container .content .left .part.active{
+    display: block;
+}
+
+.content .right .box {
+    padding: 10px;
+    cursor: pointer;
+    text-align: right;
+}
+
+.content .right .box h3 {
+    color: deepskyblue;
+}
+
+.content .right .box:not(:last-child) {
+    border-bottom: 1px solid #eee;
+    width: 90%;
+}
+
+.content .right .box .question {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.content .right .box .answer {
+    max-height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.content .right .box .fa-angle-down {
+    transition: all .3s ease-in-out;
+}
+
+.content .right .box .answer p {
+    margin: 15px 0;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.content .right .box.active .fa-angle-down {
+    transform: rotate(180deg);
+}
+
+.content .right .box.active .answer {
+  max-height: 300px;
+  visibility: visible;
+  opacity: 1;
 }
