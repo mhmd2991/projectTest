@@ -291,7 +291,7 @@ main .container {
     display: none;
 }
 
-.container .content .left .part.active{
+.container .content .left .part.active {
     display: block;
 }
 
@@ -334,11 +334,11 @@ main .container {
     font-size: 14px;
 }
 
-.content .right .box .answer p a{
+.content .right .box .answer p a {
     color: gray;
 }
 
-.content .right .box .answer p a:hover{
+.content .right .box .answer p a:hover {
     text-decoration: underline;
 }
 
@@ -347,7 +347,87 @@ main .container {
 }
 
 .content .right .box.active .answer {
-  max-height: 300px;
-  visibility: visible;
-  opacity: 1;
+    max-height: 300px;
+    visibility: visible;
+    opacity: 1;
 }
+
+main .container input[type="radio"] {
+    display: none;
+    position: relative;
+}
+
+main .container .head {
+    margin-top: 50px;
+    padding: 20px 0;
+}
+
+main .container .head .nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    gap: 20px;
+}
+
+main .container .head .nav li {
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+main .container .head .nav li::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    top: -25px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+
+main .container .head .nav li:hover::before {
+    background-color: #ddd;
+}
+
+main .container .head .nav li h2 {
+    font-size: 14px;
+}
+
+
+
+/*main .container .head .nav .timeline::after {
+    content: "";
+    height: calc(100% - 30px);
+    width: calc(100% - 107px);
+    border-color: #65C7D0;
+    left: 12px;
+    top: 15px;
+    border-radius: 100px 0 0 100px;
+    border: 7px solid #46B2BC;
+    border-right: none;
+    position: absolute;
+}
+
+main .container .head .nav .timeline:not(:first-child):nth-child(odd)::after {
+    top: -31px;
+}
+
+main .container .head .nav .timeline:nth-child(even):after {
+    left: auto;
+    right: -2px;
+    top: -8px;
+    border: 7px solid #46B2BC;
+    border-left: none;
+    border-radius: 0 100px 100px 0;
+}
+
+main .container .head .nav .timeline:nth-last-child(2):after {
+    top: -54px;
+}
+
+main .container .head .nav .timeline:nth-last-child(1)::after {
+    top: -77px !important;
+}*/
