@@ -2,6 +2,9 @@ let faqs = document.querySelectorAll(".box");
 
 faqs.forEach(faq => {
     faq.addEventListener("click", function (e) {
+        faqs.forEach(ele =>{
+            ele.classList.remove("active");
+        });
         faq.classList.toggle("active");
     });
 });
