@@ -334,6 +334,14 @@ main .container {
     font-size: 14px;
 }
 
+.content .right .box .answer p a{
+    color: gray;
+}
+
+.content .right .box .answer p a:hover{
+    text-decoration: underline;
+}
+
 .content .right .box.active .fa-angle-down {
     transform: rotate(180deg);
 }
